@@ -4,7 +4,16 @@ class TwitterMessage extends React.Component {
   constructor() {
     super();
 
-    this.state = {maxChars: 140};
+    this.state = {
+      value: "",
+      maxChars: 140};
+  }
+  
+  handleText = event => () {
+    this.setState ({
+      value: event.target.value,
+      maxChars: 140-event.target.value.length
+    });
   }
 
   render() {
