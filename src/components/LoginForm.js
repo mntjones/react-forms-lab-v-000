@@ -4,7 +4,11 @@ class LoginForm extends React.Component {
   constructor() {
     super();
 
-    this.state = { value: ""};
+    this.state = { username: "", password: ""};
+  }
+  
+  handleSubmit = (event) => {
+    
   }
 
   render() {
